@@ -1,0 +1,175 @@
+<%- include('head.ejs')%>
+
+
+<link rel="stylesheet" type="text/css" href="stylesheet/cadastro.css"/>
+<body>
+    <div class="container">
+      <form method="post" action="cadastrar">
+        <label>
+          <h1><span class="badge badge-secondary">Formulário de Cadastro de Freelancers</span></h1>
+        </label>
+        <br />
+        <label>
+          <h2><span class="badge">Informações Pessoais</span></h2>
+        </label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="sobrenome">Sobrenome</label>
+              <input type="text" class="form-control"  name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="dataNascimento">Data de Nascimento</label>
+              <input type="date" class="form-control"  name="dataN" id="dataNascimento" placeholder="" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="idade">Idade</label>
+              <input type="number" class="form-control" name="idade" id="idade" placeholder="25" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="email">E-Mail</label>
+              <input type="email" class="form-control"  name="email" id="email" placeholder="exemplo@exemplo.com" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="telefone">Telefone</label>
+              <input type="number" class="form-control"  name="telefone" id="telefone" placeholder="(61)998765566" required>
+            </div>
+            <div class="form-group col-md-12">
+              <label for="objetivos">Objetivos</label>
+              <textarea class="form-control" id="objetivo" name="objetivo" rows="5" required>
+              </textarea>
+            </div>
+          </div>
+          <label>
+              <h2><span class="badge">Endereço</span></h2>
+            </label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="rua">Rua</label>
+              <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: QSD 19 Conjunto N" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="bairro">Bairro</label>
+              <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Taguatinga" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="apartamento">Numero</label>
+              <input type="number" class="form-control" name="numero" id="numero" placeholder="Ex: 203">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="cidade">Cidade</label>
+              <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Brasília" required="">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputEstado">Estado</label>
+              <select id="inputEstado" name="estado" class="form-control" required>
+                <option selected>DF</option>
+                <option>SP</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="inputCEP">CEP</label>
+              <input type="text" class="form-control" name="cep" id="inputCEP" placeholder="Ex: 71006-125" required>
+            </div>
+          </div>
+        <label>
+          <h2><span class="badge">Formação Acadêmica</span></h2>
+        </label>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="curso">Curso</label>
+            <input type="text" name="formacao" class="form-control" id="curso" placeholder="Ex: Técnologo em Redes de Computadores" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="instituicao">Instituição de Ensino</label>
+            <input type="text" name="instituicaoA" class="form-control" id="instituicao" placeholder="Ex: UniProjeção" required>
+          </div>
+          
+          <div class="form-group col-md-3">
+            <label for="termino">Término do Curso</label>
+            <input type="text" name="terminoA" class="form-control" id="termino" placeholder="Ex: 02/2003 (2 Semestre de 2003)" required>
+          </div>
+          <div class="form-group col-md-12">
+            <label for="habilidades">Habilidades</label>
+            <textarea class="form-control" name="atividades" id="habilidades" rows="5" required></textarea>
+          </div>
+        </div>
+       <label>
+          <h2><span class="badge">Experiência Profissional</span></h2>
+       </label>
+            <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="instituicao">Instituição Onde Trabalhou</label>
+              <input type="text" class="form-control" name="instituicaoE" id="instituicao" placeholder="Ex: Stefannini">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="cargo">Cargo</label>
+              <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Ex: Programador">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="de">De</label>
+              <input type="date" class="form-control" name="inicio" id="de" placeholder="Ex: 12/02/2000">
+            </div>
+            <div class="form-group col-md-2">
+              <label for="ate">Até</label>
+              <input type="date" class="form-control" id="ate" name="termino" placeholder="Ex: 06/03/2004">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="descricao">Descrição da Atividade Exercida</label>
+              <textarea class="form-control" id="descricao" name="descricaoE" rows="5"></textarea>
+            </div>
+          </div>
+        <label>
+          <h2><span class="badge">Cursos</span></h2>
+        </label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="curso">Nome do Curso</label>
+              <input type="text" class="form-control" name="cursoC" id="curso" placeholder="Ex: Java EE">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="instituicao">Instituição do Curso Ofertado</label>
+              <input type="text" class="form-control" name="instituicaoC" id="instituicao" placeholder="Ex: Algaworks">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="data">Data de Conclusão</label>
+              <input type="date" class="form-control" name="conclusaoC" id="data" placeholder="Ex: 01/06/2005">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="descricao">Descrição do Curso</label>
+              <textarea class="form-control"  name="descricaoC" id="descricao" rows="5"></textarea>
+            </div>
+          </div>
+        <label>
+          <h2><span class="badge">Certificações</span></h2>
+        </label>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="certificacao">Nome da Certificação</label>
+              <input type="text" class="form-control" id="certificacao" name="certificacao" placeholder="Ex: Certificação ZFCE">
+            </div>
+            <div class="form-group col-md-4">
+              <label for="data">Data da Certificação</label>
+              <input type="date" class="form-control" id="data" name="dataCert" placeholder="Ex: 01/03/2000">
+            </div>
+            <div class="form-group col-md-12">
+              <label for="descricao">Descrição da Certificação</label>
+              <textarea class="form-control" id="descricao" name="descricaoCert" rows="5"></textarea>
+            </div>
+          </div>
+       
+          <div class="form-row">
+            
+          </div>
+        <button type="submit" class="btn btn-primary btn-dark">Enviar</button>
+      </form>
+    </div>
+
+  </body>
